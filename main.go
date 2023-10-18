@@ -11,7 +11,7 @@ func main() {
 	db := config.InitDB()
 
 	app := fiber.New()
-    server := routes.PublicRoutes(app, db)
+    routes.PublicRoutes(app, db)
 
-    server.Listen(":3000")
+    app.Listen(":3000")
 }
