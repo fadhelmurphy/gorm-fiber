@@ -3,7 +3,7 @@
 This is a example use FIBER and GORM to make REST API
 
 ## how to run
-``
+```
 // if you're using air just type:
 
 air
@@ -11,4 +11,4 @@ air
 // if you're not using air
 
 go run main.go
-``
+```
