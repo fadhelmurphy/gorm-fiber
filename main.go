@@ -1,11 +1,17 @@
 package main
 
 import (
-	"go-pagination-gorm/provider"
+	"go-pagination-gorm/config"
+	"github.com/gofiber/fiber/v2"
+	"go-pagination-gorm/routes"
 )
 
 func main() {
-    app := provider.ProvideService()
 
-    app.Listen(":3000")
+	db := config.InitDB()
+
+	app := fiber.New()
+    server := routes.PublicRoutes(app, db)
+
+    server.Listen(":3000")
 }
